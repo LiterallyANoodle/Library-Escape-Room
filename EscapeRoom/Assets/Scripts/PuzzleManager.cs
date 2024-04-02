@@ -19,7 +19,7 @@ public class PuzzleManager : MonoBehaviour
     }
 
     // Verify puzzle is solved 
-    public bool verifySolved() {
+    public virtual bool verifySolved() {
         bool result = true;
         foreach (PuzzleManager puzzle in this.subPuzzles) {
             result = result && puzzle.verifySolved();

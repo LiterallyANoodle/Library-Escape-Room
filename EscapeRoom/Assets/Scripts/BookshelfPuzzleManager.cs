@@ -14,7 +14,7 @@ public class BookshelfPuzzleManager : PuzzleManager
 {
     
     private int count;
-    public State state;
+    [HideInInspector] public State state;
     public BookshelfPuzzleRewardBook rwdBook;
 
     // Start is called before the first frame update
@@ -34,9 +34,8 @@ public class BookshelfPuzzleManager : PuzzleManager
             if (count == 3)
             {
                 state = State.SOLVED;
-                print("SOLVED");
+                print("Bookshelf_Puzzle: SOLVED");
                 rwdBook.DropBook();
-                // verifySolved();
             }
         }
     }
@@ -50,10 +49,9 @@ public class BookshelfPuzzleManager : PuzzleManager
         }
     }
 
-    /*
-    public bool verifySolved()
-    {
-        bool result = true;
-        return result;
-    }*/
+    
+    public override bool verifySolved()
+    {;
+        return (state == State.SOLVED);
+    }
 }

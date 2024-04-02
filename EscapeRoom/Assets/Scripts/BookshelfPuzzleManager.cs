@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+[HideInInspector]
 public enum State
 {
     UNSOLVED,
     SOLVED
 }
 
-public class BookshelfPuzzleManager : MonoBehaviour
+public class BookshelfPuzzleManager : PuzzleManager
 {
     
     private int count;
@@ -24,12 +25,6 @@ public class BookshelfPuzzleManager : MonoBehaviour
         print("Start");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Inc() 
     {
         if (state == State.UNSOLVED)
@@ -41,6 +36,7 @@ public class BookshelfPuzzleManager : MonoBehaviour
                 state = State.SOLVED;
                 print("SOLVED");
                 rwdBook.DropBook();
+                // verifySolved();
             }
         }
     }
@@ -53,4 +49,11 @@ public class BookshelfPuzzleManager : MonoBehaviour
             print("Count: " + count);
         }
     }
+
+    /*
+    public bool verifySolved()
+    {
+        bool result = true;
+        return result;
+    }*/
 }

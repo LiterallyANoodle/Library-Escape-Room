@@ -15,4 +15,7 @@ public class Keypad : MonoBehaviour
     {
         
     }
+    public void Testfun() {
+        print("Hi");
+    }
 }

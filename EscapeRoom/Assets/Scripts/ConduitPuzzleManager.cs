@@ -18,9 +18,6 @@ public class ConduitPuzzleManager : PuzzleManager
 
     void Awake() {
         this.state = ConduitPuzzleManagerState.NONE;
-        this.AddSubPuzzle(new ConduitPuzzle());
-        this.AddSubPuzzle(new ConduitPuzzle());
-        this.AddSubPuzzle(new ConduitPuzzle());
     }
 
     public void ProgressState() {

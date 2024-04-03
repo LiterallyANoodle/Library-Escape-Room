@@ -25,11 +25,7 @@ public class ConduitPuzzle : PuzzleManager
     }
 
     public void ProgressState() {
-        if (this.conduitState == ConduitState.INACTIVE) {
-            this.conduitState = ConduitState.UNSOLVED;
-        } else if (this.conduitState == ConduitState.UNSOLVED) {
-            this.conduitState = ConduitState.SOLVED;
-        }
+        this.conduitState++;
     }
 
     public override bool VerifySolved()

@@ -587,7 +587,7 @@ GameObject:
   - component: {fileID: 1926052061}
   - component: {fileID: 1926052064}
   - component: {fileID: 1926052063}
-  - component: {fileID: 1926052062}
+  - component: {fileID: 1926052065}
   m_Layer: 0
   m_Name: Conduit 1
   m_TagString: Untagged
@@ -610,14 +610,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1909433497}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1926052062
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926052060}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1926052063
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -638,7 +630,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 2c994d22a9398f64d9292e3849f59f92, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -672,6 +664,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6833ac45dbd2de4284e7fec4d52c384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!33 &1926052065
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926052060}
+  m_Mesh: {fileID: 3944073510091631902, guid: 46f94f6c275bf6e48bc14f3d444f057c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

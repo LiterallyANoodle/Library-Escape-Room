@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonPresses : MonoBehaviour
+public class Keypad : MonoBehaviour
 {
-    List<int> inputted = new List<int>();
     // Start is called before the first frame update
     void Start()
     {

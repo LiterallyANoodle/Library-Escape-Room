@@ -14,12 +14,14 @@ public class ConduitPuzzle : PuzzleManager
 {
 
     private ConduitState conduitState;
+    public PseudoPowerable powerSource; 
     public GameObject start;
     public GameObject end; 
 
     // begin in the inactive state until the puzzle is next to be solved. 
     void Awake() {
-        this.conduitState = ConduitState.INACTIVE;
+        this.conduitState = ConduitState.UNSOLVED;
+        this.powerSource.powered = PoweredState.POWERED;
     }
 
     public ConduitState GetState() {
@@ -28,6 +30,9 @@ public class ConduitPuzzle : PuzzleManager
 
     public void ProgressState() {
         this.conduitState++;
+        if (this.conduitState == ConduitState.SOLVED) {
+            print("Solved 1!");
+        }
     }
 
     public override bool VerifySolved()

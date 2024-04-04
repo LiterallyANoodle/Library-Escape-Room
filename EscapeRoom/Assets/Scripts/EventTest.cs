@@ -29,7 +29,7 @@ public class EventTest : PuzzleManager
 
     }
 
-    public override bool verifySolved()
+    public override bool VerifySolved()
     {
         return solved;
     }

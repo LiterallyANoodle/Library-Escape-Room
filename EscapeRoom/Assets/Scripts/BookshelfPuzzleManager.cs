@@ -22,7 +22,7 @@ public class BookshelfPuzzleManager : PuzzleManager
     {
         state = State.UNSOLVED;
         count = 0;
-        print("Start");
+        // print("Start");
     }
 
     public void Inc() 

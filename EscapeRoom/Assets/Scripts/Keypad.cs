@@ -5,7 +5,6 @@ using UnityEngine;
 public class Keypad : MonoBehaviour
 {
     List<int> inputted = new List<int>();
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,5 +22,12 @@ public class Keypad : MonoBehaviour
         {
             print(j);
         }
+    }
+
+    public void ButtonClear() {
+        inputted = new List<int>();
+    }
+
+    public void ButtonSubmit() {
     }
 }

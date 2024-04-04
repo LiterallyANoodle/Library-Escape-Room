@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Keypad : MonoBehaviour
+public class Keypad : PuzzleManager
 {
+    public bool check = false;
     List<int> inputted = new List<int>();
     List<int> answer;
     // Start is called before the first frame update
@@ -30,19 +31,21 @@ public class Keypad : MonoBehaviour
     }
 
     public void ButtonSubmit() {
-        bool check = true;
-
+        check = true;
         if(inputted.Count != answer.Count){
-            check = false;
             print("false");
+            check = false;
         }
         if(inputted.Count == answer.Count){
             for (int k = 0; k < inputted.Count; k++) {
                 if (answer[k] != inputted[k]) {
-                    check = false;
                     print("false");
+                    check = false;
                 }
             }
         }
+    }
+    public override bool verifySolved() {
+        return check;
     }
 }

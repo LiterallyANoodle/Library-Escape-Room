@@ -14,6 +14,8 @@ public class ConduitPuzzle : PuzzleManager
 {
 
     private ConduitState conduitState;
+    public GameObject start;
+    public GameObject end; 
 
     // begin in the inactive state until the puzzle is next to be solved. 
     void Awake() {

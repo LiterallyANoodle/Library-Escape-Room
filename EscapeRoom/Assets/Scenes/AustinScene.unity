@@ -1244,6 +1244,7 @@ MonoBehaviour:
   - {fileID: 1631278393}
   - {fileID: 1259653430}
   - {fileID: 884514409}
+  isComplete: 0
 --- !u!1 &1198540899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,7 +1992,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618056283}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.15, y: 0.6830003, z: -0.34000206}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

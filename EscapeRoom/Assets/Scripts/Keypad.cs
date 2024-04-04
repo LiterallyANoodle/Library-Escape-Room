@@ -19,5 +19,9 @@ public class Keypad : MonoBehaviour
     }
     public void Testfun(int i) {
         inputted.Add(i);
+        foreach (int j in inputted)
+        {
+            print(j);
+        }
     }
 }

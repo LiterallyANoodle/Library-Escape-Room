@@ -51,7 +51,7 @@ public class BookshelfPuzzleManager : PuzzleManager
 
     
     public override bool verifySolved()
-    {;
+    {
         return (state == State.SOLVED);
     }
 }

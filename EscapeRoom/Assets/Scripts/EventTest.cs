@@ -2,9 +2,15 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class EventTest : MonoBehaviour
+public class EventTest : PuzzleManager
 {
     public Door door;
+    private bool solved;
+
+    private void Start()
+    {
+        solved = false;
+    }
 
     public void SelectEntered(SelectEnterEventArgs e) => Display("select entered", e);
     public void SelectExited(SelectExitEventArgs e) => Display("select exited", e);
@@ -18,7 +24,13 @@ public class EventTest : MonoBehaviour
         {
             door.ChangeState(DoorStateType.OPENING);
             // SoundManager.Instance.Play(SoundType.LEVER);
+            solved = true;
         }
 
+    }
+
+    public override bool verifySolved()
+    {
+        return solved;
     }
 }

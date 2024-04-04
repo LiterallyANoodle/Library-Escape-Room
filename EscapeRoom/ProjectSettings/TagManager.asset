@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Anchor
+  - BookKeyBlue
+  - BookKeyGreen
+  - BookKeyRed
   layers:
   - Default
   - TransparentFX

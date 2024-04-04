@@ -29,7 +29,7 @@ public class PipeRotationPuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float ActivationRandomNumber = UnityEngine.Random.Range(0, 50);
+        float ActivationRandomNumber = UnityEngine.Random.Range(0, 100);
 
         if(ActivationRandomNumber == 5)
         {

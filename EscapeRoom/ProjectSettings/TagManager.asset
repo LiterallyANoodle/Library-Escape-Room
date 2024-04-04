@@ -8,6 +8,7 @@ TagManager:
   - BookKeyBlue
   - BookKeyGreen
   - BookKeyRed
+  - Plaque_Piece
   layers:
   - Default
   - TransparentFX

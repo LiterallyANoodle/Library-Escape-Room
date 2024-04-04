@@ -1,14 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.XR.Interaction.Toolkit;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class PlaquePiece : MonoBehaviour
 {
+    public UnityEvent plaquePlaced;
     public GameObject anchor;
     public bool justReleased;
+
 
     public void SelectEntered(SelectEnterEventArgs e) => this.justReleased = false;
     public void SelectExited(SelectEnterEventArgs e) => this.justReleased = true;
@@ -19,21 +23,18 @@ public class PlaquePiece : MonoBehaviour
         this.justReleased = false ;
     }
 
-    private void Update()
-    {
-        
-    }
-
     private void SnapToPlace()
     {
         transform.SetPositionAndRotation(anchor.transform.position, anchor.transform.rotation);
 
-            XRGrabInteractable interactable = GetComponent<XRGrabInteractable>();
-            interactable.enabled = false;
+        XRGrabInteractable interactable = GetComponent<XRGrabInteractable>();
+        interactable.enabled = false;
 
-            Rigidbody body = GetComponent<Rigidbody>();
-            body.useGravity = false;
-            body.isKinematic = true;
+        Rigidbody body = GetComponent<Rigidbody>();
+        body.useGravity = false;
+        body.isKinematic = true;
+
+        plaquePlaced.Invoke();
     }
 
     public void checkRangeToSnap()

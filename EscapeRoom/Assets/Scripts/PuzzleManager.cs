@@ -14,14 +14,17 @@ public class PuzzleManager : MonoBehaviour
     }
 
     // add sub puzzle managers
-    public void addSubPuzzle(PuzzleManager puzzle) {
+    public void addSubPuzzle(PuzzleManager puzzle)
+    {
         this.subPuzzles.Add(puzzle);
     }
 
     // Verify puzzle is solved 
-    public virtual bool verifySolved() {
+    public virtual bool verifySolved()
+    {
         bool result = true;
-        foreach (PuzzleManager puzzle in this.subPuzzles) {
+        foreach (PuzzleManager puzzle in this.subPuzzles)
+        {
             result = result && puzzle.verifySolved();
         }
         return result;

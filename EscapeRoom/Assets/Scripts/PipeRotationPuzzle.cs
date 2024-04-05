@@ -55,7 +55,7 @@ public class PipeRotationPuzzle : PuzzleManager
 
         if (isFirstComplete == 1 && isSecondComplete == 0)
         {
-            float ActivationRandomNumber = UnityEngine.Random.Range(0, 80);
+            float ActivationRandomNumber = UnityEngine.Random.Range(0, 6);
 
             if (ActivationRandomNumber == 5)
             {

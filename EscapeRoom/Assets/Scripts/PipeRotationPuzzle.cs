@@ -13,11 +13,12 @@ public class PipeRotationPuzzle : PuzzleManager
     [SerializeField] private float rotationSpeed = 10f; // Speed of rotation (adjust as needed)
     public GameObject[] objectsToRotate; // Array of objects to rotate
 
-    public int isComplete = 0;
+    public int isFirstComplete = 0;
+    public int isSecondComplete = 0;
     // Start is called before the first frame update
     void Start()
     {
-        print("hello");
+        
     }
 
 
@@ -35,13 +36,13 @@ public class PipeRotationPuzzle : PuzzleManager
     {
 
 
-        if ((isComplete == 0) && (objectsToRotate[6].transform.eulerAngles.z == 90) && (objectsToRotate[3].transform.eulerAngles.z == 90 | objectsToRotate[3].transform.eulerAngles.z == 270) && (objectsToRotate[0].transform.eulerAngles.z == 180) && (objectsToRotate[1].transform.eulerAngles.z == 0 | objectsToRotate[1].transform.eulerAngles.z == 180) && (objectsToRotate[2].transform.eulerAngles.z == 180) && (objectsToRotate[5].transform.eulerAngles.z == 90 | objectsToRotate[5].transform.eulerAngles.z == 270) && (objectsToRotate[8].transform.eulerAngles.z == 270))
+        if ((isFirstComplete == 0) && (objectsToRotate[6].transform.eulerAngles.z == 90) && (objectsToRotate[3].transform.eulerAngles.z == 90 | objectsToRotate[3].transform.eulerAngles.z == 270) && (objectsToRotate[0].transform.eulerAngles.z == 180) && (objectsToRotate[1].transform.eulerAngles.z == 0 | objectsToRotate[1].transform.eulerAngles.z == 180) && (objectsToRotate[2].transform.eulerAngles.z == 180) && (objectsToRotate[5].transform.eulerAngles.z == 90 | objectsToRotate[5].transform.eulerAngles.z == 270) && (objectsToRotate[8].transform.eulerAngles.z == 270))
         {
-            isComplete = 1;
+            isFirstComplete = 1;
             print("Congrats");
         }
 
-        if (isComplete == 0)
+        if (isFirstComplete == 0)
         {
             float ActivationRandomNumber = UnityEngine.Random.Range(0, 150);
 
@@ -52,11 +53,22 @@ public class PipeRotationPuzzle : PuzzleManager
             }
         }
 
+        if (isFirstComplete == 1 && isSecondComplete == 0)
+        {
+            float ActivationRandomNumber = UnityEngine.Random.Range(0, 80);
+
+            if (ActivationRandomNumber == 5)
+            {
+                int randomPipe = UnityEngine.Random.Range(9, 25);
+                objectsToRotate[randomPipe].transform.Rotate(Vector3.forward * rotationSpeed); // Rotate on Y-axis
+            }
+        }
+
 
     }
 
     public override bool VerifySolved()
     {
-        return isComplete == 1;
+        return isSecondComplete == 1;
     }
 }

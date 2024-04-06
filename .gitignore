@@ -70,3 +70,7 @@
 # Temporary auto-generated Android Assets
 **/[Aa]ssets/[Ss]treamingAssets/aa.meta
 **/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+.DS_Store
+EscapeRoom/Assets/Samples/XR Interaction Toolkit/2.5.2.meta
+EscapeRoom/Assets/Samples/XR Interaction Toolkit/2.5.2/

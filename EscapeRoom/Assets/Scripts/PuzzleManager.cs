@@ -26,4 +26,5 @@ public class PuzzleManager : MonoBehaviour
         }
         return result;
     }
+
 }

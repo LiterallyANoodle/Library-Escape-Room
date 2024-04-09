@@ -25,7 +25,7 @@ public class PipeRotationPuzzle : PuzzleManager
     public void rotatePipe(int i)
     {
 
-        objectsToRotate[i].transform.Rotate(Vector3.forward * rotationSpeed); ; // Rotate on Y-axis
+        objectsToRotate[i].transform.Rotate(Vector3.forward * rotationSpeed); ; // Rotate on X-axis
     
     }
 
@@ -49,7 +49,7 @@ public class PipeRotationPuzzle : PuzzleManager
             if (ActivationRandomNumber == 5)
             {
                 int randomPipe = UnityEngine.Random.Range(0, 9);
-                objectsToRotate[randomPipe].transform.Rotate(Vector3.forward * rotationSpeed); // Rotate on Y-axis
+                objectsToRotate[randomPipe].transform.Rotate(Vector3.forward * rotationSpeed); // Rotate on x-axis
             }
         }
 

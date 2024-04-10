@@ -6,6 +6,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
+// requires particles for showing power
+[RequireComponent(typeof(ParticleSystem))]
 public class ConduitPowerableEndpoint : PseudoPowerable
 {
 
@@ -13,10 +15,13 @@ public class ConduitPowerableEndpoint : PseudoPowerable
     private Dictionary<string, bool> TXs;
     public List<PseudoPowerable> permanentConnections;
     public UnityEvent justPowered;
+    private ParticleSystem particles;
 
     void Awake() {
         this.TXs = new Dictionary<string, bool>();
         this.isRecvFromPermanentConnections = false;
+        this.particles = GetComponent<ParticleSystem>();
+        this.particles.Stop();
     }
 
     void Update() {
@@ -67,11 +72,12 @@ public class ConduitPowerableEndpoint : PseudoPowerable
         if (oldState == PoweredState.UNPOWERED && result == PoweredState.POWERED) {
             print("JustPowered " + this.id + " with " + this.TXs.ToString());
             justPowered.Invoke();
+            this.particles.Play();
         }
         // check if newly unpowered from unpowered state
         if (oldState == PoweredState.POWERED && result == PoweredState.UNPOWERED) {
             print("JustUNPowered " + this.id + " with " + this.TXs.ToString());
-            // justPowered.Invoke();
+            this.particles.Stop();
         }
         if (result == PoweredState.UNPOWERED) {
             this.isRecvFromPermanentConnections = false;

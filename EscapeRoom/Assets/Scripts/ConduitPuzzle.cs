@@ -32,6 +32,7 @@ public class ConduitPuzzle : PuzzleManager
         this.conduitState++;
         if (this.conduitState == ConduitState.SOLVED) {
             print("Solved 1!");
+            this.end.GetComponent<ConduitPowerableEndpoint>().permanentConnections = this.start.GetComponent<ConduitPowerableEndpoint>().permanentConnections;
         }
     }
 

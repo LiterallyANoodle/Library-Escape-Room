@@ -12,7 +12,7 @@ public class Keypad : PuzzleManager
     // Start is called before the first frame update
     void Start()
     {
-        answer = new List<int>() {1,2,3};
+        answer = new List<int>() {3,4,8,1,9,0,6,2,7,5};
         buttonMeshes = new(GetComponentsInChildren<MeshRenderer>());
 
     }

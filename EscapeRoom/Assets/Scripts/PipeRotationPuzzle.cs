@@ -16,6 +16,7 @@ public class PipeRotationPuzzle : PuzzleManager
     [SerializeField] private float rotationSpeed = 10f; // Speed of rotation (adjust as needed)
     public GameObject[] objectsToRotate; // Array of objects to rotate
     public GameObject testSphere = null;
+    public GameObject destroySphere = null;
     public int isFirstComplete = 0;
     public int isSecondComplete = 0;
 
@@ -23,7 +24,8 @@ public class PipeRotationPuzzle : PuzzleManager
     // Start is called before the first frame update
     void Start()
     {
-        testSphere = GameObject.FindWithTag("TestSphere");
+        testSphere = GameObject.FindWithTag("Plaque_Piece");
+        destroySphere = GameObject.FindWithTag("TestSphere");
         animator.enabled = false;
     }
 
@@ -76,9 +78,8 @@ public class PipeRotationPuzzle : PuzzleManager
         {
             Sphere sphere = new Sphere();
             animator.speed = 0;
-            Destroy(animator.gameObject);           
-            testSphere.transform.position = new Vector3(10.0819998f, -0.236999989f, -0.343999863f);
-
+            testSphere.transform.position = new Vector3(10f, 2f, 2f);
+            Destroy(destroySphere);                       
         }
 
 

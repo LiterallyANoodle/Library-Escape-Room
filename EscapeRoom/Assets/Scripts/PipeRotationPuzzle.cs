@@ -6,10 +6,13 @@ using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR;
 using System;
+using static UnityEngine.GraphicsBuffer;
 
 
 public class PipeRotationPuzzle : PuzzleManager
 {
+    public Animator animator;
+
     [SerializeField] private float rotationSpeed = 10f; // Speed of rotation (adjust as needed)
     public GameObject[] objectsToRotate; // Array of objects to rotate
 
@@ -18,7 +21,7 @@ public class PipeRotationPuzzle : PuzzleManager
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator.enabled = false;
     }
 
 
@@ -30,21 +33,22 @@ public class PipeRotationPuzzle : PuzzleManager
     }
 
 
-
     // Update is called once per frame
     void Update()
     {
 
 
-        if ((isFirstComplete == 0) && (objectsToRotate[6].transform.eulerAngles.z == 90) && (objectsToRotate[3].transform.eulerAngles.z == 90 | objectsToRotate[3].transform.eulerAngles.z == 270) && (objectsToRotate[0].transform.eulerAngles.z == 180) && (objectsToRotate[1].transform.eulerAngles.z == 0 | objectsToRotate[1].transform.eulerAngles.z == 180) && (objectsToRotate[2].transform.eulerAngles.z == 180) && (objectsToRotate[5].transform.eulerAngles.z == 90 | objectsToRotate[5].transform.eulerAngles.z == 270) && (objectsToRotate[8].transform.eulerAngles.z == 270))
+        if ((isFirstComplete == 0) && (objectsToRotate[6].transform.eulerAngles.z == 270) && (objectsToRotate[3].transform.eulerAngles.z == 0 | objectsToRotate[3].transform.eulerAngles.z == 180) && (objectsToRotate[0].transform.eulerAngles.z == 90) && (objectsToRotate[1].transform.eulerAngles.z == 90 | objectsToRotate[1].transform.eulerAngles.z == 270) && (objectsToRotate[2].transform.eulerAngles.z == 270) && (objectsToRotate[5].transform.eulerAngles.z == 0 | objectsToRotate[5].transform.eulerAngles.z == 180) && (objectsToRotate[8].transform.eulerAngles.z == 90))
         {
             isFirstComplete = 1;
+            animator.enabled = true;
+            animator.Play("BallMove");
             print("Congrats");
         }
 
         if (isFirstComplete == 0)
         {
-            float ActivationRandomNumber = UnityEngine.Random.Range(0, 150);
+            float ActivationRandomNumber = UnityEngine.Random.Range(0, 3000);
 
             if (ActivationRandomNumber == 5)
             {
@@ -55,6 +59,7 @@ public class PipeRotationPuzzle : PuzzleManager
 
         if (isFirstComplete == 1 && isSecondComplete == 0)
         {
+            
             float ActivationRandomNumber = UnityEngine.Random.Range(0, 6);
 
             if (ActivationRandomNumber == 5)

@@ -9,6 +9,8 @@ TagManager:
   - BookKeyGreen
   - BookKeyRed
   - Plaque_Piece
+  - Button
+  - TestSphere
   layers:
   - Default
   - TransparentFX

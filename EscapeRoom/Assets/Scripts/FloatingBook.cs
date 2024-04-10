@@ -16,9 +16,9 @@ public class FloatingBook : MonoBehaviour
     void Update()
     {
         // lights.ForEach(light => { light.intensity = ((Mathf.Sin(Time.time) + 1) / 2.0f) * 3; })
-        float temp = (Mathf.Sin(Time.time) + speed) / speed;
-        print(temp);
-        transform.position = new Vector3(transform.position.x, transform.position.y * temp, transform.position.z);
+        float multiplier = (Mathf.Sin(Time.time) + speed) / speed;
+        // print(temp);
+        transform.position = new Vector3(transform.position.x, transform.position.y * multiplier, transform.position.z);
         ResetVelocity();
     }
 

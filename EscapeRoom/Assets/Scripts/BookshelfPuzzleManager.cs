@@ -34,6 +34,7 @@ public class BookshelfPuzzleManager : PuzzleManager
             if (count == 3)
             {
                 state = State.SOLVED;
+                SoundManager.Instance.Play(SoundType.SOLVED_PUZZLE_ONE);
                 print("Bookshelf_Puzzle: SOLVED");
                 rwdBook.DropBook();
             }

@@ -10,6 +10,7 @@ public class BookshelfColliderLogic : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // other.transform.eulerAngles = new Vector3(270, 270, 0);// (-0.49999997f, -0.50000006f, -0.49999851f, 0.50000155f);
+        // SoundManager.Instance.Play(SoundType.BOOK_PLACE);
         if (other.CompareTag(book.tag)) 
         { 
             puzzleManager.Inc();

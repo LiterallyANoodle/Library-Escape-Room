@@ -25,14 +25,14 @@ public class PlaquePiece : MonoBehaviour
 
     private void SnapToPlace()
     {
-        transform.SetPositionAndRotation(anchor.transform.position, anchor.transform.rotation);
+        // transform.SetPositionAndRotation(anchor.transform.position, anchor.transform.rotation);
 
-        XRGrabInteractable interactable = GetComponent<XRGrabInteractable>();
-        interactable.enabled = false;
+        // XRGrabInteractable interactable = GetComponent<XRGrabInteractable>();
+        // interactable.enabled = false;
 
-        Rigidbody body = GetComponent<Rigidbody>();
-        body.useGravity = false;
-        body.isKinematic = true;
+        // Rigidbody body = GetComponent<Rigidbody>();
+        // body.useGravity = false;
+        // body.isKinematic = true;
 
         plaquePlaced.Invoke();
     }

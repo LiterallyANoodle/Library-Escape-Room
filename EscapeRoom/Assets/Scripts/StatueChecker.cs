@@ -9,15 +9,15 @@ public class StatueChecker : PuzzleManager
     public void OnPlaquePlaced()
     {
         number++;
-
+        print(number);
     }
 
     public override bool VerifySolved()
     {
         if (number == 3)
         {
+            print("Statue Solved");
             return true;
-
         }
         return false;
     }

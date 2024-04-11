@@ -14,7 +14,7 @@ public class StatueChecker : PuzzleManager
 
     public override bool VerifySolved()
     {
-        if (number == 3)
+        if (number >= 2)
         {
             print("Statue Solved");
             return true;

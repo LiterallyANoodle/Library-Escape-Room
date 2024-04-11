@@ -26,8 +26,6 @@ public class Game : MonoBehaviour
     {
         if (puzzleManager.VerifySolved())
         {
-            // print("win");
-            // win = true;
             portal.SetActive(true);
         }
     }

@@ -56,7 +56,7 @@ public class Keypad : PuzzleManager
             }
         }
     }
-    public override bool verifySolved() {
+    public override bool VerifySolved() {
         return check;
     }
 }

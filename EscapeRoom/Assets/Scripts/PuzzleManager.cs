@@ -19,10 +19,10 @@ public class PuzzleManager : MonoBehaviour
     }
 
     // Verify puzzle is solved 
-    public virtual bool verifySolved() {
+    public virtual bool VerifySolved() {
         bool result = true;
         foreach (PuzzleManager puzzle in this.subPuzzles) {
-            result = result && puzzle.verifySolved();
+            result = result && puzzle.VerifySolved();
         }
         return result;
     }

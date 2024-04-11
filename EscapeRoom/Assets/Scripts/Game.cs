@@ -8,8 +8,9 @@ public class Game : MonoBehaviour
     private float currCountdownValue;
     public float startTime = 120;
     public TextMeshProUGUI text;
-
+    public PuzzleManager puzzleManager;
     public Menu menu;
+    public GameObject portal;
 
     public bool win;
     
@@ -23,7 +24,12 @@ public class Game : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (puzzleManager.VerifySolved())
+        {
+            print("win");
+            win = true;
+            portal.SetActive(true);
+        }
     }
 
     private string TimeToString()
@@ -58,7 +64,7 @@ public class Game : MonoBehaviour
 
         if (win)
         {
-            menu.GameWin();
+            // menu.GameWin();
         }
         else
         {

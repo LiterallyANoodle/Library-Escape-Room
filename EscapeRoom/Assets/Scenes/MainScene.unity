@@ -761,6 +761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2424297d3a8da4ca812f78940c6a59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subPuzzles: []
   check: 0
   initialMat: {fileID: 2100000, guid: 08590e793cb445146893da62b198351c, type: 2}
 --- !u!114 &12205654
@@ -1747,6 +1748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d3a2c8a0da6853479b8e4e9d80053ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subPuzzles: []
   state: 0
   rwdBook: {fileID: 514730268}
 --- !u!1 &68061356
@@ -2451,7 +2453,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &115462419
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7334,7 +7336,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTime: 1800
   text: {fileID: 5441352841268877237}
-  menu: {fileID: 0}
+  puzzleManager: {fileID: 1986115618}
+  menu: {fileID: 1062818847}
   win: 0
 --- !u!1001 &386626825
 PrefabInstance:
@@ -8867,6 +8870,7 @@ Transform:
   - {fileID: 1393427044}
   - {fileID: 380769177}
   - {fileID: 1561329486}
+  - {fileID: 1986115617}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &501910948
@@ -15046,7 +15050,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1829121593929415475, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.24
+      value: 0.993
       objectReference: {fileID: 0}
     - target: {fileID: 1895850661858129975, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
       propertyPath: m_Mesh
@@ -31891,6 +31895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4874790283302ff488dbcdc44de5776c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subPuzzles: []
   door: {fileID: 1235914782}
 --- !u!1001 &1563930218
 PrefabInstance:
@@ -33132,7 +33137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1649429655
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38973,6 +38978,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7571347595517837429, guid: 0133a1418ad100c47b5b79e189f00396, type: 3}
   m_PrefabInstance: {fileID: 1985681392}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1986115616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1986115617}
+  - component: {fileID: 1986115618}
+  m_Layer: 0
+  m_Name: PuzzleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1986115617
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986115616}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 491675325}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1986115618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986115616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec01b756b7a1a3f429c4d1b769bdebd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subPuzzles:
+  - {fileID: 1561329487}
 --- !u!1001 &1987402176
 PrefabInstance:
   m_ObjectHideFlags: 0

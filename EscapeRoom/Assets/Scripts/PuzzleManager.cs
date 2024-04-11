@@ -5,12 +5,12 @@ using UnityEngine;
 public class PuzzleManager : MonoBehaviour
 {
 
-    private List<PuzzleManager> subPuzzles;
+    public List<PuzzleManager> subPuzzles;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.subPuzzles = new List<PuzzleManager>();
+        // this.subPuzzles = new List<PuzzleManager>();
     }
 
     // add sub puzzle managers

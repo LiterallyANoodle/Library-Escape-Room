@@ -50,5 +50,7 @@ public class Game : MonoBehaviour
             timeText = TimeToString();
             text.text = timeText;
         }
+
+        // call lose ui
     }
 }

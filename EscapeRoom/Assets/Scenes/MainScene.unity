@@ -16006,11 +16006,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7571347595517837429, guid: 0133a1418ad100c47b5b79e189f00396, type: 3}
   m_PrefabInstance: {fileID: 593066424}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &599794270 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 2723069120549264897, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
-  m_PrefabInstance: {fileID: 1275613869}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &602506451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16363,6 +16358,14 @@ PrefabInstance:
     - target: {fileID: 3346819151683272130, guid: df2248523af295b4489b9ebce01074a8, type: 3}
       propertyPath: m_Name
       value: Podium
+      objectReference: {fileID: 0}
+    - target: {fileID: 3346819151683272130, guid: df2248523af295b4489b9ebce01074a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7379049494471434527, guid: df2248523af295b4489b9ebce01074a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9001842881613740751, guid: df2248523af295b4489b9ebce01074a8, type: 3}
       propertyPath: m_LocalScale.x
@@ -22056,6 +22059,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Podium
       objectReference: {fileID: 0}
+    - target: {fileID: 3346819151683272130, guid: df2248523af295b4489b9ebce01074a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7379049494471434527, guid: df2248523af295b4489b9ebce01074a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9001842881613740751, guid: df2248523af295b4489b9ebce01074a8, type: 3}
       propertyPath: m_LocalScale.x
       value: -0.3345689
@@ -22329,35 +22340,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7571347595517837429, guid: 0133a1418ad100c47b5b79e189f00396, type: 3}
   m_PrefabInstance: {fileID: 1030004188}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1030538229 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5699358587440068396, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
-  m_PrefabInstance: {fileID: 1275613869}
-  m_PrefabAsset: {fileID: 0}
---- !u!145 &1030538231
-SpringJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030538229}
-  m_ConnectedBody: {fileID: 599794270}
-  m_ConnectedArticulationBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  serializedVersion: 2
-  m_Spring: 1000
-  m_Damper: 10
-  m_MinDistance: 0
-  m_MaxDistance: 0
-  m_Tolerance: 0.025
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 0
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
 --- !u!1001 &1047163273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26276,6 +26258,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 148314650}
     m_Modifications:
+    - target: {fileID: 435895061279050071, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
+      propertyPath: id
+      value: Wire Start
+      objectReference: {fileID: 0}
     - target: {fileID: 495555936228141830, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -26283,6 +26269,10 @@ PrefabInstance:
     - target: {fileID: 537023303978838951, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 701759119600714796, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
+      propertyPath: id
+      value: Endpoint Start
       objectReference: {fileID: 0}
     - target: {fileID: 1277035450785716598, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26328,9 +26318,25 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1676349522054662749, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
+      propertyPath: id
+      value: Wire End
+      objectReference: {fileID: 0}
     - target: {fileID: 2014661011340446488, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
       propertyPath: m_Name
       value: ConduitPuzzleManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3840999777157344605, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457488786140063777, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920846332980127789, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
+      propertyPath: m_Constraints
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 5326584583312264414, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
       propertyPath: m_Enabled
@@ -26348,10 +26354,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.629
       objectReference: {fileID: 0}
+    - target: {fileID: 5774343539653127994, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
+      propertyPath: id
+      value: Left Hand
+      objectReference: {fileID: 0}
     - target: {fileID: 5961548464193889710, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 7048601247072954131, guid: 47f3b271b50f14d4fbc351a0104e9d46, type: 3}
+    - target: {fileID: 6052992528259307871, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
+      propertyPath: id
+      value: Endpoint End
+      objectReference: {fileID: 0}
     - target: {fileID: 6458435273309665201, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
       propertyPath: m_LocalPosition.z
       value: 1.22
@@ -26376,6 +26390,10 @@ PrefabInstance:
       propertyPath: tracking
       value: 
       objectReference: {fileID: 1398514156}
+    - target: {fileID: 9220517917771666026, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
+      propertyPath: id
+      value: Right Hand
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -26389,9 +26407,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6050750713175733658, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
       insertIndex: -1
       addedObject: {fileID: 149547422}
-    - targetCorrespondingSourceObject: {fileID: 5699358587440068396, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1030538231}
   m_SourcePrefab: {fileID: 100100000, guid: c8609dd2fc7beed4d9e177cf43f54d84, type: 3}
 --- !u!4 &1275613870 stripped
 Transform:

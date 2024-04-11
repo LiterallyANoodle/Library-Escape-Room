@@ -53,7 +53,7 @@ public class PipeRotationPuzzle : PuzzleManager
 
         if (isFirstComplete == 0)
         {
-            float ActivationRandomNumber = UnityEngine.Random.Range(0, 3000);
+            float ActivationRandomNumber = UnityEngine.Random.Range(0, 600);
 
             if (ActivationRandomNumber == 5)
             {
@@ -78,16 +78,15 @@ public class PipeRotationPuzzle : PuzzleManager
         {
             Sphere sphere = new Sphere();
             animator.speed = 0;
-            testSphere.transform.position = new Vector3(10f, 2f, 2f);
+            testSphere.transform.localPosition = new Vector3(10f, 1f, -.5f);
             Destroy(destroySphere);                       
         }
-
 
 
         if (isFirstComplete == 1 && isSecondComplete == 0)
         {
 
-            float ActivationRandomNumber = UnityEngine.Random.Range(0, 500);
+            float ActivationRandomNumber = UnityEngine.Random.Range(0, 200);
 
             if (ActivationRandomNumber == 5)
             {

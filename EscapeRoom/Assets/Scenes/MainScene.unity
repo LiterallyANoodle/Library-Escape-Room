@@ -2515,7 +2515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &115462419
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20083,7 +20083,7 @@ MonoBehaviour:
   plaquePlaced:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1559449798}
+      - m_Target: {fileID: 1559449796}
         m_TargetAssemblyTypeName: StatueChecker, Assembly-CSharp
         m_MethodName: OnPlaquePlaced
         m_Mode: 1

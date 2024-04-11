@@ -33,7 +33,7 @@ public class PlaquePiece : MonoBehaviour
         // Rigidbody body = GetComponent<Rigidbody>();
         // body.useGravity = false;
         // body.isKinematic = true;
-
+        print("Invoke");
         plaquePlaced.Invoke();
     }
 
@@ -43,7 +43,8 @@ public class PlaquePiece : MonoBehaviour
         if (!justReleased)
         {
             float distanceToAnchor = Vector3.Distance(this.transform.position, anchor.transform.position);
-            if (distanceToAnchor < 0.1f)
+            print(distanceToAnchor);
+            if (distanceToAnchor < 0.7f)
             {
                 SnapToPlace();
             }

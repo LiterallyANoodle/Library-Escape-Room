@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-[HideInInspector]
 public enum State
 {
     UNSOLVED,
@@ -34,6 +33,7 @@ public class BookshelfPuzzleManager : PuzzleManager
             if (count == 3)
             {
                 state = State.SOLVED;
+                SoundManager.Instance.Play(SoundType.SOLVED_PUZZLE_ONE);
                 print("Bookshelf_Puzzle: SOLVED");
                 rwdBook.DropBook();
             }

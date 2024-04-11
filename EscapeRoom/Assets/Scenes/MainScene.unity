@@ -22828,7 +22828,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1062818846
 Transform:
   m_ObjectHideFlags: 0
@@ -32208,6 +32208,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6543530620854345230, guid: 9f15ec38551c72042a1de8b51d258c6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1559449797}
+    - targetCorrespondingSourceObject: {fileID: 6543530620854345230, guid: 9f15ec38551c72042a1de8b51d258c6b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1559449798}
   m_SourcePrefab: {fileID: 100100000, guid: 9f15ec38551c72042a1de8b51d258c6b, type: 3}
 --- !u!4 &1559449795 stripped
 Transform:
@@ -32240,6 +32243,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.025770178, y: 0.025770178, z: 0.09469082}
   m_Center: {x: 0, y: 0, z: 0.03298932}
+--- !u!114 &1559449798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559449796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c7b0a9253cf6442946fc73e9ca665b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subPuzzles: []
 --- !u!1001 &1560570080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39708,6 +39724,7 @@ MonoBehaviour:
   - {fileID: 67037755}
   - {fileID: 12205653}
   - {fileID: 670753372}
+  - {fileID: 1559449798}
 --- !u!1001 &1987402176
 PrefabInstance:
   m_ObjectHideFlags: 0

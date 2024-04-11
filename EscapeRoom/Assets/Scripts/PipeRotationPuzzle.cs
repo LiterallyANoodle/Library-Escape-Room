@@ -8,7 +8,7 @@ using UnityEngine.XR;
 using System;
 
 
-public class PipeRotationPuzzle : MonoBehaviour
+public class PipeRotationPuzzle : PuzzleManager
 {
     [SerializeField] private float rotationSpeed = 10f; // Speed of rotation (adjust as needed)
     public GameObject[] objectsToRotate; // Array of objects to rotate
@@ -43,7 +43,7 @@ public class PipeRotationPuzzle : MonoBehaviour
 
         if (isComplete == 0)
         {
-            float ActivationRandomNumber = UnityEngine.Random.Range(0, 1000);
+            float ActivationRandomNumber = UnityEngine.Random.Range(0, 150);
 
             if (ActivationRandomNumber == 5)
             {
@@ -55,4 +55,9 @@ public class PipeRotationPuzzle : MonoBehaviour
 
     }
 
+
+    public override bool VerifySolved()
+    {
+        return isComplete == 1;
+    }
 }

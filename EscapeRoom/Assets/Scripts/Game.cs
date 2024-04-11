@@ -8,11 +8,16 @@ public class Game : MonoBehaviour
     private float currCountdownValue;
     public float startTime = 120;
     public TextMeshProUGUI text;
+
+    public Menu menu;
+
+    public bool win;
     
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(StartCountdown(startTime));
+        win = false;
     }
 
     // Update is called once per frame
@@ -43,7 +48,7 @@ public class Game : MonoBehaviour
         currCountdownValue = countdownValue;
         string timeText = TimeToString();
         text.text = timeText;
-        while (currCountdownValue > 0)
+        while (currCountdownValue > 0 && !win)
         {
             yield return new WaitForSeconds(1.0f);
             currCountdownValue--;
@@ -51,6 +56,13 @@ public class Game : MonoBehaviour
             text.text = timeText;
         }
 
-        // call lose ui
+        if (win)
+        {
+            menu.GameWin();
+        }
+        else
+        {
+            menu.GameOver();
+        }
     }
 }

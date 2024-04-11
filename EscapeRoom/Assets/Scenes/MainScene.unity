@@ -7338,6 +7338,7 @@ MonoBehaviour:
   text: {fileID: 5441352841268877237}
   puzzleManager: {fileID: 1986115618}
   menu: {fileID: 1062818847}
+  portal: {fileID: 1649429654}
   win: 0
 --- !u!1001 &386626825
 PrefabInstance:

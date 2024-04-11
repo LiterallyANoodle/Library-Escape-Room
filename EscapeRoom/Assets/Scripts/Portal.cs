@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
+    public Game game;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,10 @@ public class Portal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print(other.tag);
+        // print(other.tag);
+        if (other.CompareTag("Player"))
+        {
+            game.SetWin();
+        }
     }
 }

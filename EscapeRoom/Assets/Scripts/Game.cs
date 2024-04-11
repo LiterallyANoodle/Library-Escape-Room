@@ -26,8 +26,8 @@ public class Game : MonoBehaviour
     {
         if (puzzleManager.VerifySolved())
         {
-            print("win");
-            win = true;
+            // print("win");
+            // win = true;
             portal.SetActive(true);
         }
     }
@@ -49,6 +49,8 @@ public class Game : MonoBehaviour
         return (minutes + ":" + seconds);
     }
 
+    public void SetWin() { win = true; }
+
     public IEnumerator StartCountdown(float countdownValue)
     {
         currCountdownValue = countdownValue;
@@ -64,7 +66,7 @@ public class Game : MonoBehaviour
 
         if (win)
         {
-            // menu.GameWin();
+            menu.GameWin();
         }
         else
         {

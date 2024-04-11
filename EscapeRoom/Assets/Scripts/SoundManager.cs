@@ -8,7 +8,7 @@ public enum SoundType
     LEVER,
     SOLVED_PUZZLE_ONE,
     DOOR,
-    BOOK_PLACE
+    BOOK_PLACE,
     PRESSED,
 }
 

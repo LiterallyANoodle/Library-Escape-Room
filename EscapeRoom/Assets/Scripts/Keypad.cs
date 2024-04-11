@@ -56,6 +56,9 @@ public class Keypad : PuzzleManager
                 }
             }
         }
+        if (check == true) {
+            SoundManager.Instance.Play(SoundType.SOLVED_PUZZLE_ONE);
+        }
     }
     public override bool VerifySolved() {
         return check;

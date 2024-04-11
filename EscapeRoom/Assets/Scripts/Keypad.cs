@@ -5,12 +5,16 @@ using UnityEngine;
 public class Keypad : PuzzleManager
 {
     public bool check = false;
+    private List<MeshRenderer> buttonMeshes;
     List<int> inputted = new List<int>();
     List<int> answer;
+    public Material initialMat;
     // Start is called before the first frame update
     void Start()
     {
-        answer = new List<int>() {1,2,3};
+        answer = new List<int>() {3,4,8,1,9,0,6,2,7,5};
+        buttonMeshes = new(GetComponentsInChildren<MeshRenderer>());
+
     }
 
     // Update is called once per frame
@@ -28,6 +32,11 @@ public class Keypad : PuzzleManager
 
     public void ButtonClear() {
         inputted = new List<int>();
+        foreach(MeshRenderer mr in buttonMeshes) {
+            if (mr.CompareTag("Button")) {
+            mr.material = initialMat;
+            }
+        }
     }
 
     public void ButtonSubmit() {
@@ -35,12 +44,14 @@ public class Keypad : PuzzleManager
         if(inputted.Count != answer.Count){
             print("false");
             check = false;
+            ButtonClear();
         }
         if(inputted.Count == answer.Count){
             for (int k = 0; k < inputted.Count; k++) {
                 if (answer[k] != inputted[k]) {
                     print("false");
                     check = false;
+                    ButtonClear();
                 }
             }
         }

@@ -15,9 +15,8 @@ public class FloatingBook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // lights.ForEach(light => { light.intensity = ((Mathf.Sin(Time.time) + 1) / 2.0f) * 3; })
         float multiplier = (Mathf.Sin(Time.time) + speed) / speed;
-        // print(temp);
+        // print(multiplier);
         transform.position = new Vector3(transform.position.x, transform.position.y * multiplier, transform.position.z);
         ResetVelocity();
     }

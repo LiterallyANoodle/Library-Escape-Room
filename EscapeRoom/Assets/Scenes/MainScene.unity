@@ -15033,6 +15033,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4351471061923249282, guid: e606a534559e21743acd2ac1958ff3ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 540113308}
+    - targetCorrespondingSourceObject: {fileID: 4351471061923249282, guid: e606a534559e21743acd2ac1958ff3ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 540113312}
   m_SourcePrefab: {fileID: 100100000, guid: e606a534559e21743acd2ac1958ff3ce, type: 3}
 --- !u!4 &540113305 stripped
 Transform:
@@ -15118,7 +15121,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 540113312}
+        m_TargetAssemblyTypeName: PlaquePiece, Assembly-CSharp
+        m_MethodName: checkRangeToSnap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -15244,6 +15259,35 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &540113312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540113306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1dfe3cfc7bc5014a841b7946e5e2e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plaquePlaced:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1559449798}
+        m_TargetAssemblyTypeName: StatueChecker, Assembly-CSharp
+        m_MethodName: OnPlaquePlaced
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  anchor: {fileID: 2029455701}
+  justReleased: 0
 --- !u!1001 &549307848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15678,6 +15722,26 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7898197628147677371, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7898197628147677371, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7898197628147677371, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7898197628147677371, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7898197628147677371, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlaquePiece, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7911906338090825693, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -15697,6 +15761,42 @@ PrefabInstance:
     - target: {fileID: 8377368117481933476, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394224355375981667, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
+      propertyPath: anchor
+      value: 
+      objectReference: {fileID: 1678581415}
+    - target: {fileID: 8394224355375981667, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394224355375981667, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
+      propertyPath: plaquePlaced.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394224355375981667, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
+      propertyPath: plaquePlaced.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394224355375981667, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
+      propertyPath: plaquePlaced.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1559449798}
+    - target: {fileID: 8394224355375981667, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
+      propertyPath: plaquePlaced.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394224355375981667, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
+      propertyPath: plaquePlaced.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPlaquePlaced
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394224355375981667, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
+      propertyPath: plaquePlaced.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StatueChecker, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394224355375981667, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
+      propertyPath: plaquePlaced.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8640003484065322928, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
       propertyPath: m_Mesh
@@ -15736,7 +15836,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4688657698349139325, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
-    - {fileID: 7898197628147677371, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3915271128805846497, guid: 6de12143576bf224298dc48d52dc72fd, type: 3}
@@ -19743,6 +19842,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6954679309142700766, guid: 8d6026b4aff25a5428d88302dd087603, type: 3}
       insertIndex: -1
       addedObject: {fileID: 820057317}
+    - targetCorrespondingSourceObject: {fileID: 6954679309142700766, guid: 8d6026b4aff25a5428d88302dd087603, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 820057322}
   m_SourcePrefab: {fileID: 100100000, guid: 8d6026b4aff25a5428d88302dd087603, type: 3}
 --- !u!4 &820057315 stripped
 Transform:
@@ -19807,7 +19909,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 820057322}
+        m_TargetAssemblyTypeName: PlaquePiece, Assembly-CSharp
+        m_MethodName: checkRangeToSnap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -19954,6 +20068,35 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.004921075, y: 0.019999998, z: 0.019999998}
   m_Center: {x: -0.0075394902, y: 0, z: 0}
+--- !u!114 &820057322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820057316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1dfe3cfc7bc5014a841b7946e5e2e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plaquePlaced:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1559449798}
+        m_TargetAssemblyTypeName: StatueChecker, Assembly-CSharp
+        m_MethodName: OnPlaquePlaced
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  anchor: {fileID: 1678581415}
+  justReleased: 0
 --- !u!1001 &821539135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37892,6 +38035,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 849529311412455296, guid: 70283a5845ef2ab4ab0ecb7ae1c1ef29, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1849295278}
+    - targetCorrespondingSourceObject: {fileID: 849529311412455296, guid: 70283a5845ef2ab4ab0ecb7ae1c1ef29, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1849295283}
   m_SourcePrefab: {fileID: 100100000, guid: 70283a5845ef2ab4ab0ecb7ae1c1ef29, type: 3}
 --- !u!4 &1849295276 stripped
 Transform:
@@ -37956,7 +38102,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1849295283}
+        m_TargetAssemblyTypeName: PlaquePiece, Assembly-CSharp
+        m_MethodName: checkRangeToSnap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -38103,6 +38261,35 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0063724862, y: 0.019999998, z: 0.019999998}
   m_Center: {x: 0.006813779, y: -0, z: 0}
+--- !u!114 &1849295283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849295277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1dfe3cfc7bc5014a841b7946e5e2e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plaquePlaced:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1559449798}
+        m_TargetAssemblyTypeName: StatueChecker, Assembly-CSharp
+        m_MethodName: OnPlaquePlaced
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  anchor: {fileID: 1909597097}
+  justReleased: 0
 --- !u!1001 &1849601876
 PrefabInstance:
   m_ObjectHideFlags: 0

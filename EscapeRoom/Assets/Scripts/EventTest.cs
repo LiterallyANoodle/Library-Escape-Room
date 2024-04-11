@@ -20,7 +20,7 @@ public class EventTest : PuzzleManager
 
     public void Display(string text, BaseInteractionEventArgs e)
     {
-        if (text == "select exited")
+        if (text == "select exited" && solved == false)
         {
             door.ChangeState(DoorStateType.OPENING);
             // SoundManager.Instance.Play(SoundType.LEVER);

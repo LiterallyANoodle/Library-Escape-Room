@@ -96,8 +96,8 @@ public class SoundManager : MonoBehaviour
             {SoundType.BOOK_PLACE, new("BookPlace") },
             {SoundType.PRESSED, new("buttonpress")}
         };
-        rangeVol = new(0.75f, 1.0f);
-        rangePitch = new(0.75f, 1.25f);
+        rangeVol = new(1.0f, 1.25f);
+        rangePitch = new(0.75f, 1.0f);
     }
 
     public void Play(SoundType type, AudioSource audioSrc = null)

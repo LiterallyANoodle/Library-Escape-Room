@@ -28,6 +28,7 @@ public class Keypad : PuzzleManager
         {
             print(j);
         }
+        SoundManager.Instance.Play(SoundType.PRESSED);
     }
 
     public void ButtonClear() {

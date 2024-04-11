@@ -9,6 +9,7 @@ public enum SoundType
     SOLVED_PUZZLE_ONE,
     DOOR,
     BOOK_PLACE
+    PRESSED,
 }
 
 public struct Range
@@ -92,7 +93,8 @@ public class SoundManager : MonoBehaviour
             {SoundType.LEVER, new("Lever") },
             {SoundType.SOLVED_PUZZLE_ONE, new("Solved") },
             {SoundType.DOOR, new("Door")},
-            {SoundType.BOOK_PLACE, new("BookPlace") }
+            {SoundType.BOOK_PLACE, new("BookPlace") },
+            {SoundType.PRESSED, new("buttonpress")}
         };
         rangeVol = new(0.75f, 1.0f);
         rangePitch = new(0.75f, 1.25f);
